@@ -9,12 +9,12 @@ services:
       POSTGRES_PASSWORD: password
 
   app:
-    image: veera0921/emp46131564
+    image: veera0921/emp46131564-m3
     build:
       context: .
     restart: always
     environment:
-      DBHOST: 18.144.56.190
+      DBHOST: 3.101.118.217
       DBPORT: 5432
       DBNAME: postgres
       DBUSER: emp46131564

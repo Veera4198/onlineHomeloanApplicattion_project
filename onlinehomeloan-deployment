@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config-manikanta
+data:
+  DBNAME: "emp46131564"
+  DBUSERNAME: "emp46131564"
+  DBPASSWORD: "password"
+  DBHOST: "postgres"
+  DBPORT: "5432"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-manikanta
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp-manikanta
+  template:
+    metadata:
+      name: myapp-manikanta
+      labels:
+        app: myapp-manikanta
+    spec:
+      containers:
+      - name: ovs
+        image: veera0921/homeloan 
+        ports:
+        - containerPort: 8093 
+        envFrom:
+          - configMapRef:
+              name: app-config-manikanta
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service-manikanta
+spec:
+  type: NodePort
+  ports:
+  - targetPort: 8093 
+    port: 8093 
+  selector:
+    app: myapp-manikanta

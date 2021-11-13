@@ -16,8 +16,8 @@ services:
     environment:
       DBHOST: db
       DBPORT: 5432
-      DBNAME: emp46131564
-      DBUSER: emp46131564
+      DBNAME: postgres
+      DBUSER: postgres
       DBPASS: password
     ports:
       - 8093:8093

@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: ovs
-        image: veera0921/homeloan 
+        image: veera0921/46131564 
         ports:
         - containerPort: 8093 
         envFrom:

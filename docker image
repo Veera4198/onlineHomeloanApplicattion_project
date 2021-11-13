@@ -1,0 +1,4 @@
+-> docker login
+->docker build -t sarvan1213/myappname            //myappname is the name of the image that we are pushing to dockerhub
+->docker run sarvan1213/myappname             //after running this we will get errors because we dont have the database no problem go on with steps
+->docker push sarvan1213/myappname

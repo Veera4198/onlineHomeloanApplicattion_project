@@ -13,4 +13,9 @@ sudo usermod -aG docker ubuntu
 sudo apt-get install openjdk-8-jdk
 //install jdk
 
+Sudo apt install maven
+//maven install
 
+
+sudo apt install postgres
+//postgres install

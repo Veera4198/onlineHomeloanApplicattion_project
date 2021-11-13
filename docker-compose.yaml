@@ -14,9 +14,9 @@ services:
       context: .
     restart: always
     environment:
-      DBHOST: 3.101.118.217
+      DBHOST: db
       DBPORT: 5432
-      DBNAME: postgres
+      DBNAME: emp46131564
       DBUSER: emp46131564
       DBPASS: password
     ports:
